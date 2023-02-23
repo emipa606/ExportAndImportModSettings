@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Export and Import Mod Settings</name>
+  <packageId>Mlie.ExportAndImportModSettings</packageId>
+  <author>Mlie</author>
+  <url>https://github.com/emipa606/ExportAndImportModSettings</url>
+  <supportedVersions>
+    <li>1.4</li>
+  </supportedVersions>
+  <modDependencies />
+  <loadAfter />
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+
+Ive gotten requests of adding exportable mod-settings to my mods from users that are putting together mod-packs and would like to bundle specific mod-settings with the pack.
+Instead of implementing this per mod I wrote this mod instead.
+
+This mod adds two small buttons at the top of the mod-options window for all mods (apart from HugsLib as that uses its own options-file for all mod-settings).
+With these you can export the current mod-settings to a folder (default is the Desktop-folder but is changable in the mod-settings) and the file is then used to import the mod-settings.
+
+The importing is done by overwriting the current settings with the imported file and then reloading the mod to apply the updated mod-settings. This can trigger warnings/errors depending on how the mod-settings are applied by the mod. If you notice some issues with a mods settings a simple way to reapply the imported settings is to restart the game.
+
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/ExportAndImportModSettings][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/h5VwTNL.png[/img][/td]
+    [/tr]
+[/table]
+
+[img]https://i.imgur.com/O0IIlYj.png[/img]
+Since modding is just a hobby for me I expect no donations to keep modding. If you still want to show your support you can gift me anything from my [url=https://store.steampowered.com/wishlist/id/Mlie]Wishlist[/url] or buy me a cup of tea.
+
+[url=https://ko-fi.com/G2G55DDYD][img]https://i.imgur.com/Utx6OIH.png[/img][/url]
+
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+</description>
+</ModMetaData>

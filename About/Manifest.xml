@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+  <identifier>ExportAndImportModSettings</identifier>
+  <version>1.4.0</version>
+  <dependencies />
+  <incompatibleWith />
+  <loadBefore />
+  <loadAfter />
+  <manifestUri>https://raw.githubusercontent.com/emipa606/ExportAndImportModSettings/master/About/Manifest.xml</manifestUri>
+  <downloadUri>https://github.com/emipa606/ExportAndImportModSettings/releases</downloadUri>
+</Manifest>
