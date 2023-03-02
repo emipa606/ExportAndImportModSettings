@@ -14,4 +14,9 @@
   <EIMS.SaveLocationMissing>Kann nicht überprüfen, ob der Pfad existiert, kann ihn nicht speichern</EIMS.SaveLocationMissing>
   <EIMS.SaveLocation>Standort für Export/Import</EIMS.SaveLocation>
   <EIMS.SaveLocationTT>Ordner, in den die mod-configs exportiert und aus dem sie gelesen werden</EIMS.SaveLocationTT>
+  <EIMS.ImportAllVerify>HINWEIS: Dadurch werden die aktuellen Mod-Einstellungen aller Mods mit den Einstellungsdateien bei {0} überschrieben, falls sie unterschiedlich sind. Abhängig von den Mods kann dies zu Fehlern oder Warnungen führen, da die Mods mit diesen aktualisierten Werten neu geladen werden. Ein Neustart ist wahrscheinlich erforderlich, um die Werte vollständig zu übernehmen. Fortfahren?</EIMS.ImportAllVerify>
+  <EIMS.ExportAllActive>Mod-Einstellungen für alle aktiven Mods exportieren</EIMS.ExportAllActive>
+  <EIMS.ImportAllActive>Vorhandene Mod-Einstellungen für alle aktiven Mods importieren</EIMS.ImportAllActive>
+  <EIMS.ExportedAllSettings>Exportierte {0} mod-Einstellungen nach {1}</EIMS.ExportedAllSettings>
+  <EIMS.ImportedAllSettings>Importierte {0} Mod-Einstellungen (übersprang {1}, da sie identisch waren) von {2} und lud die relevanten Mods neu, Sie müssen das Spiel möglicherweise neu starten, um sie richtig anzuwenden.</EIMS.ImportedAllSettings>
 </LanguageData>

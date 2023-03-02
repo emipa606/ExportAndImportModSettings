@@ -14,4 +14,9 @@
   <EIMS.SaveLocationMissing>无法验证路径是否存在，将无法保存它。</EIMS.SaveLocationMissing>
   <EIMS.SaveLocation>出口/进口地点</EIMS.SaveLocation>
   <EIMS.SaveLocationTT>输出和读取mod-configs的文件夹是哪里？</EIMS.SaveLocationTT>
+  <EIMS.ImportAllVerify>注意：这将用{0}处的设置文件覆盖所有mods的当前设置，如果它们是不同的。根据不同的mods，这可能会引发错误或警告，因为mods将使用这些更新的值重新加载。可能需要重新启动以完全应用这些值。继续吗？</EIMS.ImportAllVerify>
+  <EIMS.ExportAllActive>导出所有活动模组的模组设置</EIMS.ExportAllActive>
+  <EIMS.ImportAllActive>导入所有活动模组的现有模组设置</EIMS.ImportAllActive>
+  <EIMS.ExportedAllSettings>导出{0}个mod-settings到{1}。</EIMS.ExportedAllSettings>
+  <EIMS.ImportedAllSettings>从{2}导入{0}MOD设置（跳过{1}，因为它们是相同的），并重新加载相关MOD，你可能需要重新启动游戏以正确应用它们。</EIMS.ImportedAllSettings>
 </LanguageData>

@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
   <identifier>ExportAndImportModSettings</identifier>
-  <version>1.4.0</version>
+  <version>1.4.1</version>
   <dependencies />
   <incompatibleWith />
   <loadBefore />

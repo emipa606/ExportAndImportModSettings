@@ -14,4 +14,9 @@
   <EIMS.SaveLocationMissing>Невозможно проверить, что путь существует, не удастся сохранить его</EIMS.SaveLocationMissing>
   <EIMS.SaveLocation>Местонахождение экспорта/импорта</EIMS.SaveLocation>
   <EIMS.SaveLocationTT>Где папка, в которую экспортируются и из которой считываются mod-configs</EIMS.SaveLocationTT>
+  <EIMS.ImportAllVerify>ПРИМЕЧАНИЕ: Это перезапишет текущие настройки всех модов с файлами настроек в {0}, если они отличаются. В зависимости от модов это может вызвать ошибки или предупреждения, так как моды будут перезагружены с использованием обновленных значений. Для полного применения значений, вероятно, потребуется перезагрузка. Продолжить?</EIMS.ImportAllVerify>
+  <EIMS.ExportAllActive>Экспорт настроек модов для всех активных модов</EIMS.ExportAllActive>
+  <EIMS.ImportAllActive>Импорт существующих настроек модов для всех активных модов</EIMS.ImportAllActive>
+  <EIMS.ExportedAllSettings>Экспортировал {0} мод-настроек в {1}</EIMS.ExportedAllSettings>
+  <EIMS.ImportedAllSettings>Импортировал {0} мод-настройки (пропустил {1}, так как они были идентичны) из {2} и перезагрузил соответствующие моды, вам может потребоваться перезапустить игру, чтобы применить их правильно.</EIMS.ImportedAllSettings>
 </LanguageData>

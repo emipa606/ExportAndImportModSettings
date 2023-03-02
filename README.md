@@ -11,6 +11,8 @@ With these you can export the current mod-settings to a folder (default is the D
 
 The importing is done by overwriting the current settings with the imported file and then reloading the mod to apply the updated mod-settings. This can trigger warnings/errors depending on how the mod-settings are applied by the mod. If you notice some issues with a mods settings a simple way to reapply the imported settings is to restart the game.
 
+There is also an option to export or import all active mods settings from this mods settings-window.
+
 ![Image](https://i.imgur.com/O0IIlYj.png)
 
 Since modding is just a hobby for me I expect no donations to keep modding. If you still want to show your support you can gift me anything from my https://store.steampowered.com/wishlist/id/Mlie]Wishlist or buy me a cup of tea.
@@ -31,3 +33,4 @@ https://ko-fi.com/G2G55DDYD]![Image](https://i.imgur.com/Utx6OIH.png)
 
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2937876372]Last updated 2023-03-02

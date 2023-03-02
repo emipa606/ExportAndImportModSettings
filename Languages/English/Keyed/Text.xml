@@ -3,7 +3,8 @@
   <EIMS.modVersion>Installed mod-version: {0}</EIMS.modVersion>
   <EIMS.ImportTooltip>Will overwrite the current mod-settings of the mod with the settings-file at {0}</EIMS.ImportTooltip>
   <EIMS.ImportTooltipInactive>No settings-file found to import from {0}</EIMS.ImportTooltipInactive>
-  <EIMS.ImportVerify>NOTE: This will overwrite the current mod-settings of the mod with the settings-file at {0}. Depending on the mod this may trigger errors or warning as the mod will be reloaded using these updated values. Some  Continue?</EIMS.ImportVerify>
+  <EIMS.ImportVerify>NOTE: This will overwrite the current mod-settings of the mod with the settings-file at {0}. Depending on the mod this may trigger errors or warning as the mod will be reloaded using these updated values. A restart may be required to fully apply the values. Continue?</EIMS.ImportVerify>
+  <EIMS.ImportAllVerify>NOTE: This will overwrite the current mod-settings of all mods with the settings-files at {0} if they are different. Depending on the mods this may trigger errors or warning as the mods will be reloaded using these updated values. A restart is probably required to fully apply the values. Continue?</EIMS.ImportAllVerify>
   <EIMS.ExportTooltip>Will export a copy of the current settings to {0}</EIMS.ExportTooltip>
   <EIMS.ExportedSettings>Exported mod-settings for {0} to {1}</EIMS.ExportedSettings>
   <EIMS.ImportedSettings>Imported mod-settings for {0} from {1}, please reopen settings to verify.</EIMS.ImportedSettings>
@@ -13,4 +14,8 @@
   <EIMS.SaveLocationMissing>Cound not verify that the path exists, will not be able to save it</EIMS.SaveLocationMissing>
   <EIMS.SaveLocation>Export/Import location</EIMS.SaveLocation>
   <EIMS.SaveLocationTT>Where folder where mod-configs are exported to and read from</EIMS.SaveLocationTT>
+  <EIMS.ExportAllActive>Export mod-settings for all active-mods</EIMS.ExportAllActive>
+  <EIMS.ImportAllActive>Import existing mod-settings for all active-mods</EIMS.ImportAllActive>
+  <EIMS.ExportedAllSettings>Exported {0} mod-settings to {1}</EIMS.ExportedAllSettings>
+  <EIMS.ImportedAllSettings>Imported {0} mod-settings (skipped {1} since they were identical) from {2} and reloaded the relevant mods, you might need to restart the game to apply them properly.</EIMS.ImportedAllSettings>
 </LanguageData>
