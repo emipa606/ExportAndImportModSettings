@@ -77,7 +77,7 @@ public static class Dialog_ModSettings_DoWindowContents
         Scribe.saver.InitSaving(fileNameOfSettings, "SettingsBlock");
         try
         {
-            Scribe_Deep.Look(ref ___mod.modSettings, "ModSettings", Array.Empty<object>());
+            Scribe_Deep.Look(ref ___mod.modSettings, "ModSettings", []);
             Messages.Message("EIMS.ExportedSettings".Translate(___mod.SettingsCategory(), fileNameOfSettings),
                 MessageTypeDefOf.TaskCompletion, false);
         }

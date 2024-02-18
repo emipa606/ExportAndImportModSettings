@@ -61,10 +61,17 @@ internal class ExportAndImportModSettingsMod : Mod
             listing_Standard.Label("EIMS.SaveLocationMissing".Translate());
         }
 
+        var allFolder = Path.Combine(instance.Settings.SaveLocation, "AllModConfigs");
+
         listing_Standard.Gap();
         if (listing_Standard.ButtonText("EIMS.ExportAllActive".Translate()))
         {
             var settingsExported = 0;
+            if (!Directory.Exists(allFolder))
+            {
+                Directory.CreateDirectory(allFolder);
+            }
+
             foreach (var mod in LoadedModManager.ModHandles)
             {
                 var modFolderName = mod.Content.FolderName;
@@ -75,13 +82,13 @@ internal class ExportAndImportModSettingsMod : Mod
                     continue;
                 }
 
-                var exportFilename = Path.Combine(instance.Settings.SaveLocation,
+                var exportFilename = Path.Combine(allFolder,
                     GenText.SanitizeFilename($"Mod_{modFolderName}_{modTypeName}.xml"));
                 File.Copy(settingsFilename, exportFilename, true);
                 settingsExported++;
             }
 
-            Messages.Message("EIMS.ExportedAllSettings".Translate(settingsExported, instance.Settings.SaveLocation),
+            Messages.Message("EIMS.ExportedAllSettings".Translate(settingsExported, allFolder),
                 MessageTypeDefOf.TaskCompletion,
                 false);
         }
@@ -89,8 +96,14 @@ internal class ExportAndImportModSettingsMod : Mod
         listing_Standard.Gap();
         if (listing_Standard.ButtonText("EIMS.ImportAllActive".Translate()))
         {
+            var importFolder = Settings.SaveLocation;
+            if (!Directory.Exists(allFolder))
+            {
+                importFolder = allFolder;
+            }
+
             Find.WindowStack.Add(new Dialog_MessageBox(
-                "EIMS.ImportAllVerify".Translate(instance.Settings.SaveLocation),
+                "EIMS.ImportAllVerify".Translate(importFolder),
                 "No".Translate(), null, "Yes".Translate(),
                 delegate
                 {
@@ -103,7 +116,7 @@ internal class ExportAndImportModSettingsMod : Mod
                         var mod = modHandles[i];
                         var modFolderName = mod.Content.FolderName;
                         var modTypeName = mod.GetType().Name;
-                        var importFileName = Path.Combine(instance.Settings.SaveLocation,
+                        var importFileName = Path.Combine(importFolder,
                             GenText.SanitizeFilename($"Mod_{modFolderName}_{modTypeName}.xml"));
                         if (!File.Exists(importFileName))
                         {
@@ -132,8 +145,7 @@ internal class ExportAndImportModSettingsMod : Mod
                     }
 
                     Messages.Message(
-                        "EIMS.ImportedAllSettings".Translate(settingsImported, settingsSkipped,
-                            instance.Settings.SaveLocation),
+                        "EIMS.ImportedAllSettings".Translate(settingsImported, settingsSkipped, importFolder),
                         MessageTypeDefOf.TaskCompletion,
                         false);
                 }));
