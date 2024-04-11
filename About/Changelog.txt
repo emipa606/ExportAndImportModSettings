@@ -1,5 +1,8 @@
 # Changelog for ExportAndImportModSettings
 
+1.5.0 - Updated for 1.5
+
+
 1.4.2 - When exporting all settings the are now saved in a subfolder to remove clutter
 
 
