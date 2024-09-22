@@ -19,4 +19,5 @@
   <EIMS.ImportAllActive>Vorhandene Mod-Einstellungen für alle aktiven Mods importieren</EIMS.ImportAllActive>
   <EIMS.ExportedAllSettings>Exportierte {0} mod-Einstellungen nach {1}</EIMS.ExportedAllSettings>
   <EIMS.ImportedAllSettings>Importierte {0} Mod-Einstellungen (übersprang {1}, da sie identisch waren) von {2} und lud die relevanten Mods neu, Sie müssen das Spiel möglicherweise neu starten, um sie richtig anzuwenden.</EIMS.ImportedAllSettings>
+  <EIMS.ButtonsLocation>Platzierung der Schaltfläche "Exportieren/Importieren</EIMS.ButtonsLocation>
 </LanguageData>

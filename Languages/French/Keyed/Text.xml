@@ -19,4 +19,5 @@
   <EIMS.ImportAllActive>Importation des réglages existants pour tous les mods actifs</EIMS.ImportAllActive>
   <EIMS.ExportedAllSettings>Exportation de {0} paramètres modulaires vers {1}.</EIMS.ExportedAllSettings>
   <EIMS.ImportedAllSettings>J'ai importé les paramètres de {0} mods (j'ai ignoré {1} car ils étaient identiques) de {2} et j'ai rechargé les mods concernés. Il se peut que vous deviez redémarrer le jeu pour les appliquer correctement.</EIMS.ImportedAllSettings>
+  <EIMS.ButtonsLocation>Placement du bouton Export/Import</EIMS.ButtonsLocation>
 </LanguageData>

@@ -1,5 +1,9 @@
 # Changelog for ExportAndImportModSettings
 
+1.5.1 - Moved buttons to right of title. Added option to select other positions for the buttons.
+Used DeepL to update translations for ChineseSimplified, French, German, Russian
+
+
 1.5.0 - Updated for 1.5
 
 

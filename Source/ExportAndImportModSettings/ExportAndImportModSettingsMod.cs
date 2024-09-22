@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using Mlie;
@@ -10,6 +11,14 @@ namespace ExportAndImportModSettings;
 [StaticConstructorOnStartup]
 internal class ExportAndImportModSettingsMod : Mod
 {
+    public enum ButtonLocation
+    {
+        AfterTitle = 0,
+        UpperRight = 1,
+        LowerLeft = 2,
+        LowerRight = 3
+    }
+
     /// <summary>
     ///     The instance of the settings to be read by the mod
     /// </summary>
@@ -51,6 +60,16 @@ internal class ExportAndImportModSettingsMod : Mod
     {
         var listing_Standard = new Listing_Standard();
         listing_Standard.Begin(rect);
+
+        if (listing_Standard.ButtonTextLabeled("EIMS.ButtonsLocation".Translate(),
+                ((ButtonLocation)Settings.ButtonLocation).ToString()))
+        {
+            // Make a dropdown with the enum values
+            Find.WindowStack.Add(new FloatMenu(Enum.GetNames(typeof(ButtonLocation))
+                .Select(label => new FloatMenuOption(label,
+                    () => Settings.ButtonLocation = (int)Enum.Parse(typeof(ButtonLocation), label)))
+                .ToList()));
+        }
 
         listing_Standard.Label("EIMS.SaveLocation".Translate(), -1,
             "EIMS.SaveLocationTT".Translate());

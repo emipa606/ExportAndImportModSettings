@@ -7,6 +7,7 @@ namespace ExportAndImportModSettings;
 /// </summary>
 internal class ExportAndImportModSettingsSettings : ModSettings
 {
+    public int ButtonLocation;
     public string SaveLocation = ExportAndImportModSettings.GetDefaultSaveLocation();
 
     /// <summary>
@@ -16,5 +17,6 @@ internal class ExportAndImportModSettingsSettings : ModSettings
     {
         base.ExposeData();
         Scribe_Values.Look(ref SaveLocation, "SaveLocation", ExportAndImportModSettings.GetDefaultSaveLocation());
+        Scribe_Values.Look(ref ButtonLocation, "ButtonLocation");
     }
 }

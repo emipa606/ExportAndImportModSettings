@@ -8,20 +8,40 @@ using Verse;
 
 namespace ExportAndImportModSettings;
 
-[HarmonyPatch(typeof(Dialog_ModSettings), "DoWindowContents")]
+[StaticConstructorOnStartup]
+[HarmonyPatch(typeof(Dialog_ModSettings), nameof(Dialog_ModSettings.DoWindowContents))]
 public static class Dialog_ModSettings_DoWindowContents
 {
-    private static readonly Texture2D ExportSettings = ContentFinder<Texture2D>.Get("UI/ExportSettings");
-    private static readonly Texture2D ImportSettings = ContentFinder<Texture2D>.Get("UI/ImportSettings");
-
-    private static readonly Texture2D
-        ImportSettingsInactive = ContentFinder<Texture2D>.Get("UI/ImportSettingsInactive");
+    public static readonly Texture2D ExportSettings = ContentFinder<Texture2D>.Get("UI/ExportSettings");
+    public static readonly Texture2D ImportSettings = ContentFinder<Texture2D>.Get("UI/ImportSettings");
+    public static readonly Texture2D ImportSettingsInactive = ContentFinder<Texture2D>.Get("UI/ImportSettingsInactive");
 
     public static void Postfix(Rect inRect, ref Mod ___mod, ref Dialog_ModSettings __instance)
     {
         var buttonSize = new Vector2(24f, 24f);
-        var importButtonRect = new Rect(new Vector2(inRect.width - 5f - buttonSize.x, 0f), buttonSize);
-        var exportButtonRect = new Rect(new Vector2(inRect.width - 5f - (buttonSize.x * 2), 0f), buttonSize);
+        Vector2 basePosition;
+        switch (ExportAndImportModSettingsMod.instance.Settings.ButtonLocation)
+        {
+            case 1:
+                basePosition = new Vector2(inRect.width - 5f - (buttonSize.x * 2), 0f);
+                break;
+            case 2:
+                basePosition = new Vector2(0, inRect.height - buttonSize.y);
+                break;
+            case 3:
+                basePosition = new Vector2(inRect.width - 5f - (buttonSize.x * 2), inRect.height - buttonSize.y);
+                break;
+            default:
+                basePosition = new Vector2(0, 0);
+                // add the measured length of the settings category 
+                Text.Font = GameFont.Medium;
+                basePosition.x += Text.CalcSize(___mod.SettingsCategory()).x + 5f;
+                Text.Font = GameFont.Small;
+                break;
+        }
+
+        var importButtonRect = new Rect(basePosition, buttonSize);
+        var exportButtonRect = new Rect(basePosition + new Vector2(buttonSize.x, 0), buttonSize);
         var modFolderName = ___mod.Content.FolderName;
         var modTypeName = ___mod.GetType().Name;
         var fileNameOfSettings = Path.Combine(ExportAndImportModSettingsMod.instance.Settings.SaveLocation,
@@ -77,7 +97,7 @@ public static class Dialog_ModSettings_DoWindowContents
         Scribe.saver.InitSaving(fileNameOfSettings, "SettingsBlock");
         try
         {
-            Scribe_Deep.Look(ref ___mod.modSettings, "ModSettings", []);
+            Scribe_Deep.Look(ref ___mod.modSettings, "ModSettings");
             Messages.Message("EIMS.ExportedSettings".Translate(___mod.SettingsCategory(), fileNameOfSettings),
                 MessageTypeDefOf.TaskCompletion, false);
         }

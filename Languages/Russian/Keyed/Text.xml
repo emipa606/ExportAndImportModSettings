@@ -19,4 +19,5 @@
   <EIMS.ImportAllActive>Импорт существующих настроек модов для всех активных модов</EIMS.ImportAllActive>
   <EIMS.ExportedAllSettings>Экспортировал {0} мод-настроек в {1}</EIMS.ExportedAllSettings>
   <EIMS.ImportedAllSettings>Импортировал {0} мод-настройки (пропустил {1}, так как они были идентичны) из {2} и перезагрузил соответствующие моды, вам может потребоваться перезапустить игру, чтобы применить их правильно.</EIMS.ImportedAllSettings>
+  <EIMS.ButtonsLocation>Размещение кнопки экспорта/импорта</EIMS.ButtonsLocation>
 </LanguageData>
