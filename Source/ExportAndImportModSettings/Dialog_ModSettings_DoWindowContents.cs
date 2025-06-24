@@ -20,7 +20,7 @@ public static class Dialog_ModSettings_DoWindowContents
     {
         var buttonSize = new Vector2(24f, 24f);
         Vector2 basePosition;
-        switch (ExportAndImportModSettingsMod.instance.Settings.ButtonLocation)
+        switch (ExportAndImportModSettingsMod.Instance.Settings.ButtonLocation)
         {
             case 1:
                 basePosition = new Vector2(inRect.width - 5f - (buttonSize.x * 2), 0f);
@@ -44,7 +44,7 @@ public static class Dialog_ModSettings_DoWindowContents
         var exportButtonRect = new Rect(basePosition + new Vector2(buttonSize.x, 0), buttonSize);
         var modFolderName = ___mod.Content.FolderName;
         var modTypeName = ___mod.GetType().Name;
-        var fileNameOfSettings = Path.Combine(ExportAndImportModSettingsMod.instance.Settings.SaveLocation,
+        var fileNameOfSettings = Path.Combine(ExportAndImportModSettingsMod.Instance.Settings.SaveLocation,
             GenText.SanitizeFilename($"Mod_{modFolderName}_{modTypeName}.xml"));
 
         TooltipHandler.TipRegion(exportButtonRect, "EIMS.ExportTooltip".Translate(fileNameOfSettings));

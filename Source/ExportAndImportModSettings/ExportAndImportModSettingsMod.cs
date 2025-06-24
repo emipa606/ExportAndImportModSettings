@@ -11,18 +11,10 @@ namespace ExportAndImportModSettings;
 [StaticConstructorOnStartup]
 internal class ExportAndImportModSettingsMod : Mod
 {
-    public enum ButtonLocation
-    {
-        AfterTitle = 0,
-        UpperRight = 1,
-        LowerLeft = 2,
-        LowerRight = 3
-    }
-
     /// <summary>
     ///     The instance of the settings to be read by the mod
     /// </summary>
-    public static ExportAndImportModSettingsMod instance;
+    public static ExportAndImportModSettingsMod Instance;
 
     private static string currentVersion;
 
@@ -32,7 +24,7 @@ internal class ExportAndImportModSettingsMod : Mod
     /// <param name="content"></param>
     public ExportAndImportModSettingsMod(ModContentPack content) : base(content)
     {
-        instance = this;
+        Instance = this;
         Settings = GetSettings<ExportAndImportModSettingsSettings>();
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
@@ -80,7 +72,7 @@ internal class ExportAndImportModSettingsMod : Mod
             listing_Standard.Label("EIMS.SaveLocationMissing".Translate());
         }
 
-        var allFolder = Path.Combine(instance.Settings.SaveLocation, "AllModConfigs");
+        var allFolder = Path.Combine(Instance.Settings.SaveLocation, "AllModConfigs");
 
         listing_Standard.Gap();
         if (listing_Standard.ButtonText("EIMS.ExportAllActive".Translate()))
@@ -144,7 +136,7 @@ internal class ExportAndImportModSettingsMod : Mod
 
                         var settingsFilename = LoadedModManager.GetSettingsFilename(modFolderName, modTypeName);
 
-                        if (File.Exists(settingsFilename) && AreFilesTheSame(importFileName, settingsFilename))
+                        if (File.Exists(settingsFilename) && areFilesTheSame(importFileName, settingsFilename))
                         {
                             settingsSkipped++;
                             continue;
@@ -181,7 +173,7 @@ internal class ExportAndImportModSettingsMod : Mod
         listing_Standard.End();
     }
 
-    private bool AreFilesTheSame(string firstFilePath, string secondFilePath)
+    private static bool areFilesTheSame(string firstFilePath, string secondFilePath)
     {
         if (!File.Exists(firstFilePath) || !File.Exists(secondFilePath))
         {
@@ -199,5 +191,13 @@ internal class ExportAndImportModSettingsMod : Mod
         }
 
         base.WriteSettings();
+    }
+
+    private enum ButtonLocation
+    {
+        AfterTitle = 0,
+        UpperRight = 1,
+        LowerLeft = 2,
+        LowerRight = 3
     }
 }

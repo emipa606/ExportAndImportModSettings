@@ -2,7 +2,9 @@
   "Continued": false,
   "CanAdd": "0",
   "CanRemove": "0",
-  "PreviewVersion": "1.5",
+  "PreviewVersion": "1.6",
   "SocialImageSet": true,
-  "FundingSet": true
+  "FundingSet": true,
+  "LastXmlCleaning": "2025-06-24T17:13:44.3201032+02:00",
+  "SearchTags": " save and load"
 }
