@@ -20,4 +20,5 @@
   <EIMS.ExportedAllSettings>Exportierte {0} mod-Einstellungen nach {1}</EIMS.ExportedAllSettings>
   <EIMS.ImportedAllSettings>Importierte {0} Mod-Einstellungen (übersprang {1}, da sie identisch waren) von {2} und lud die relevanten Mods neu, Sie müssen das Spiel möglicherweise neu starten, um sie richtig anzuwenden.</EIMS.ImportedAllSettings>
   <EIMS.ButtonsLocation>Platzierung der Schaltfläche "Exportieren/Importieren</EIMS.ButtonsLocation>
+  <EIMS.ImportedAllSettingsNew>Es wurden {0} Mod-Einstellungen importiert ({1} wurden übersprungen, da sie identisch waren; bei {2} aktiven Mods gab es keine zu importierenden Einstellungen) aus {3} und die entsprechenden Mods wurden neu geladen. Möglicherweise musst du das Spiel neu starten, damit die Änderungen ordnungsgemäß übernommen werden.</EIMS.ImportedAllSettingsNew>
 </LanguageData>

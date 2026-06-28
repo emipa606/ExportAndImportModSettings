@@ -20,4 +20,5 @@
   <EIMS.ExportedAllSettings>Exportation de {0} paramètres modulaires vers {1}.</EIMS.ExportedAllSettings>
   <EIMS.ImportedAllSettings>J'ai importé les paramètres de {0} mods (j'ai ignoré {1} car ils étaient identiques) de {2} et j'ai rechargé les mods concernés. Il se peut que vous deviez redémarrer le jeu pour les appliquer correctement.</EIMS.ImportedAllSettings>
   <EIMS.ButtonsLocation>Placement du bouton Export/Import</EIMS.ButtonsLocation>
+  <EIMS.ImportedAllSettingsNew>{0} paramètres de mod ont été importés ({1} ont été ignorés car ils étaient identiques, {2} mods actifs ne comportaient aucun paramètre à importer) depuis {3} et les mods concernés ont été rechargés. Vous devrez peut-être redémarrer le jeu pour que ces modifications soient correctement prises en compte.</EIMS.ImportedAllSettingsNew>
 </LanguageData>

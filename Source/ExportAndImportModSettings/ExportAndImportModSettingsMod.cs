@@ -108,7 +108,7 @@ internal class ExportAndImportModSettingsMod : Mod
         if (listing_Standard.ButtonText("EIMS.ImportAllActive".Translate()))
         {
             var importFolder = Settings.SaveLocation;
-            if (!Directory.Exists(allFolder))
+            if (Directory.Exists(allFolder))
             {
                 importFolder = allFolder;
             }
@@ -120,6 +120,7 @@ internal class ExportAndImportModSettingsMod : Mod
                 {
                     var settingsImported = 0;
                     var settingsSkipped = 0;
+                    var settingsNotFound = 0;
                     var modHandles = LoadedModManager.ModHandles.ToList();
                     // ReSharper disable once ForCanBeConvertedToForeach
                     for (var i = 0; i < modHandles.Count; i++)
@@ -131,6 +132,12 @@ internal class ExportAndImportModSettingsMod : Mod
                             GenText.SanitizeFilename($"Mod_{modFolderName}_{modTypeName}.xml"));
                         if (!File.Exists(importFileName))
                         {
+                            settingsNotFound++;
+                            if (Prefs.DevMode)
+                            {
+                                Log.Warning($"Settings file not found for mod: {modFolderName} at {importFileName}");
+                            }
+
                             continue;
                         }
 
@@ -139,6 +146,12 @@ internal class ExportAndImportModSettingsMod : Mod
                         if (File.Exists(settingsFilename) && areFilesTheSame(importFileName, settingsFilename))
                         {
                             settingsSkipped++;
+                            if (Prefs.DevMode)
+                            {
+                                Log.Warning(
+                                    $"Settings file for mod: {modFolderName} is the same as the imported file, skipping import.");
+                            }
+
                             continue;
                         }
 
@@ -156,7 +169,8 @@ internal class ExportAndImportModSettingsMod : Mod
                     }
 
                     Messages.Message(
-                        "EIMS.ImportedAllSettings".Translate(settingsImported, settingsSkipped, importFolder),
+                        "EIMS.ImportedAllSettingsNew".Translate(settingsImported, settingsSkipped, settingsNotFound,
+                            importFolder),
                         MessageTypeDefOf.TaskCompletion,
                         false);
                 }));

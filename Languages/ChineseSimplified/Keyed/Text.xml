@@ -20,4 +20,5 @@
   <EIMS.ExportedAllSettings>导出{0}个mod-settings到{1}。</EIMS.ExportedAllSettings>
   <EIMS.ImportedAllSettings>从{2}导入{0}MOD设置（跳过{1}，因为它们是相同的），并重新加载相关MOD，你可能需要重新启动游戏以正确应用它们。</EIMS.ImportedAllSettings>
   <EIMS.ButtonsLocation>导出/导入按钮的位置</EIMS.ButtonsLocation>
+  <EIMS.ImportedAllSettingsNew>已从 {3} 导入 {0} 条模组设置（跳过了 {1} 条，因其内容相同；{2} 个已启用的模组无设置可导入），并重新加载了相关模组，您可能需要重启游戏才能正确应用这些设置。</EIMS.ImportedAllSettingsNew>
 </LanguageData>

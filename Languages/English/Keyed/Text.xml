@@ -19,4 +19,5 @@
   <EIMS.ImportAllActive>Import existing mod-settings for all active-mods</EIMS.ImportAllActive>
   <EIMS.ExportedAllSettings>Exported {0} mod-settings to {1}</EIMS.ExportedAllSettings>
   <EIMS.ImportedAllSettings>Imported {0} mod-settings (skipped {1} since they were identical) from {2} and reloaded the relevant mods, you might need to restart the game to apply them properly.</EIMS.ImportedAllSettings>
+  <EIMS.ImportedAllSettingsNew>Imported {0} mod-settings (skipped {1} since they were identical, {2} active mods had no settings to import) from {3} and reloaded the relevant mods, you might need to restart the game to apply them properly.</EIMS.ImportedAllSettingsNew>
 </LanguageData>

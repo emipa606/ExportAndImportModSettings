@@ -12,9 +12,11 @@ namespace ExportAndImportModSettings;
 [HarmonyPatch(typeof(Dialog_ModSettings), nameof(Dialog_ModSettings.DoWindowContents))]
 public static class Dialog_ModSettings_DoWindowContents
 {
-    public static readonly Texture2D ExportSettings = ContentFinder<Texture2D>.Get("UI/ExportSettings");
-    public static readonly Texture2D ImportSettings = ContentFinder<Texture2D>.Get("UI/ImportSettings");
-    public static readonly Texture2D ImportSettingsInactive = ContentFinder<Texture2D>.Get("UI/ImportSettingsInactive");
+    private static readonly Texture2D ExportSettings = ContentFinder<Texture2D>.Get("UI/ExportSettings");
+    private static readonly Texture2D ImportSettings = ContentFinder<Texture2D>.Get("UI/ImportSettings");
+
+    private static readonly Texture2D
+        ImportSettingsInactive = ContentFinder<Texture2D>.Get("UI/ImportSettingsInactive");
 
     public static void Postfix(Rect inRect, ref Mod ___mod, ref Dialog_ModSettings __instance)
     {
