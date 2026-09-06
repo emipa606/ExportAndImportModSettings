@@ -6,7 +6,7 @@ using Verse;
 namespace ExportAndImportModSettings;
 
 [StaticConstructorOnStartup]
-public class ExportAndImportModSettings
+public static class ExportAndImportModSettings
 {
     static ExportAndImportModSettings()
     {

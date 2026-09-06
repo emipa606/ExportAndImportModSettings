@@ -47,11 +47,11 @@ internal class ExportAndImportModSettingsMod : Mod
     ///     The settings-window
     ///     For more info: https://rimworldwiki.com/wiki/Modding_Tutorials/ModSettings
     /// </summary>
-    /// <param name="rect"></param>
-    public override void DoSettingsWindowContents(Rect rect)
+    /// <param name="inRect"></param>
+    public override void DoSettingsWindowContents(Rect inRect)
     {
         var listing_Standard = new Listing_Standard();
-        listing_Standard.Begin(rect);
+        listing_Standard.Begin(inRect);
 
         if (listing_Standard.ButtonTextLabeled("EIMS.ButtonsLocation".Translate(),
                 ((ButtonLocation)Settings.ButtonLocation).ToString()))
@@ -160,6 +160,7 @@ internal class ExportAndImportModSettingsMod : Mod
                         var modType = mod.GetType();
                         LoadedModManager.runningModClasses.Remove(LoadedModManager.runningModClasses
                             .First(pair => modType == pair.Key).Key);
+                        Log.Message("[ExportAndImportModSettings] Imported settings for mod: " + modFolderName);
                         settingsImported++;
                     }
 
